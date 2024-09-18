@@ -1,0 +1,12 @@
+#!/bin/bash
+
+function cmd_exists {
+    [[ -x $(command -v "$1") ]]
+}
+
+if ! cmd_exists checkupdates; then
+    echo -1
+    exit 1
+fi
+
+echo $(checkupdates | wc -l)

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+function cmd_exists {
+    [[ -x $(command -v "$1") ]]
+}
+
+if cmd_exists pamixer; then
+    vol=$(pamixer --get-volume)
+elif cmd_exists wpctl; then
+    vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{ print $2; }' | sed 's/0\.//g')
+elif cmd_exists pactl; then
+    vol=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{ print $5; }' | sed 's/[^0-9]*//g')
+else
+    echo -1
+    exit 1
+fi
+
+echo $vol
+
