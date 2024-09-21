@@ -19,6 +19,8 @@ alias s='git status'
 alias commit='git commit -m'
 alias pull='git pull'
 alias push='git push'
+alias diffu='git diff'
+alias diffs='git diff --staged'
 
 alias ..='cd ..'
 alias .2='cd ../..'
