@@ -1,6 +1,7 @@
 alias vim='nvim'
 alias rg='rg -S'
 alias du='du -sh'
+alias df='df -h'
 alias free='free -h'
 alias grep='grep --color=auto -i'
 
