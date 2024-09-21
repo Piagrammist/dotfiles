@@ -18,3 +18,13 @@
     ```shell
     nitrogen
     ```
+
+## Git Credential Manager
+
+```shell
+git-credential-manager configure
+git config --global credential.credentialStore gpg
+gpg --gen-key
+# get <gpg-id> from above command
+pass init <gpg-id>
+```
