@@ -6,7 +6,7 @@ default = bar.Bar(
         widget.Spacer(length=10),
         widget.TextBox(
             "󰣇",
-            font="Symblos Nerd Fonts",
+            font="Symbols Nerd Fonts",
             fontsize=24,
             markup=False,
         ),
