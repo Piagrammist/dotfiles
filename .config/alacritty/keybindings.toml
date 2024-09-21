@@ -4,6 +4,18 @@ key = "F11"
 mods = "None"
 
 [[keyboard.bindings]]
+action = "ScrollLineUp"
+key = "Up"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ScrollLineDown"
+key = "Down"
+mode = "~Alt"
+mods = "Shift"
+
+[[keyboard.bindings]]
 action = "ScrollPageUp"
 key = "PageUp"
 mode = "~Alt"
