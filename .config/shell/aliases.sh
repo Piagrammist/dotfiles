@@ -43,7 +43,7 @@ __base_ls="$__base_eza -lAhF"
 alias ls="$__base_ls"
 alias la="$__base_eza -A"
 alias ll="$__base_eza -l"
-alias lt="$__base_eza -At"
+alias lt="$__base_eza -AT"
 alias l.="$__base_ls .."
 alias l..="$__base_ls ../.."
 unset __base_eza __base_ls
