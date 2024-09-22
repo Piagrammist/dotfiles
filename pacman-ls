@@ -5,6 +5,7 @@ dunst
 eza
 fd
 ffmpeg
+flameshot
 git
 gnome-keyring
 go
@@ -37,8 +38,10 @@ procs
 python
 python-pip
 python-pywal
+qalculate-qt
 qtile
 ranger
+reflector
 ripgrep
 rofi
 rust
