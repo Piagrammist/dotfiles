@@ -73,3 +73,5 @@ xf86-video-fbdev
 xorg-apps
 xorg-server
 zsh
+zsh-autosuggestions
+zsh-syntax-highlighting

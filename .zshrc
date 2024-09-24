@@ -15,3 +15,8 @@ __base_dir="$HOME/.config/shell"
 unset __base_dir
 
 eval "$(starship init zsh)"
+
+__zsh_dir="/usr/share/zsh/plugins"
+source "$__zsh_dir/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"
+source "$__zsh_dir/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh"
+unset __zsh_dir
