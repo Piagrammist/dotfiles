@@ -1,2 +1,2 @@
-require("config")
-require("config.lazy")
+require("vim-options")
+require("lazy-bootstrap")
