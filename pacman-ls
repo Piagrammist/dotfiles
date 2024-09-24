@@ -69,8 +69,8 @@ vim
 virtualbox-guest-utils
 wget
 xclip
-xf86-video-fbdev
 xorg-apps
+xorg-drivers
 xorg-server
 zsh
 zsh-autosuggestions
