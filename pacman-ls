@@ -1,6 +1,7 @@
 alacritty
 bat
 btop
+cmake
 dunst
 eza
 fd
@@ -13,6 +14,8 @@ gtk3
 gtk4
 htop
 less
+lua
+luarocks
 man-db
 man-pages
 monolith
@@ -21,6 +24,7 @@ neovim
 networkmanager
 network-manager-applet
 nitrogen
+nodejs
 noto-fonts
 noto-fonts-emoji
 openssh
@@ -34,6 +38,7 @@ pipewire
 pipewire-jack
 pipewire-pulse
 playerctl
+pnpm
 procs
 python
 python-pip
@@ -49,6 +54,8 @@ sd
 starship
 sudo
 tokei
+tree-sitter
+tree-sitter-cli
 ttf-dejavu
 ttf-mona-sans
 ttf-mplus-nerd
