@@ -50,6 +50,7 @@ reflector
 ripgrep
 rofi
 rust
+rust-src
 sd
 starship
 sudo
