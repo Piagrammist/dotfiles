@@ -5,16 +5,6 @@ local opt = vim.opt
 g.mapleader = " "
 g.maplocalleader = "\\"
 
--- Transparency
---vim.cmd [[
---  highlight Normal guibg=none
---  highlight NonText guibg=none
---  highlight Normal ctermbg=none
---  highlight NonText ctermbg=none
---]]
-
-o.termguicolors = true
-
 -- No need to save when switching buffers
 o.hidden = true
 
