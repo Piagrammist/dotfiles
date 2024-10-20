@@ -1,5 +1,6 @@
 import = [
     '~/.config/alacritty/keybindings.toml',
+    '~/.config/alacritty/tokyodark.toml',
 ]
 
 [env]
