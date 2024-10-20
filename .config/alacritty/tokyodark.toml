@@ -27,5 +27,5 @@
     text = '#11121d'
 
 [colors.selection]
-    background = '#11121d'
-    text = '#a0a8cd'
+    background = '#a0a8cd'
+    text = '#11121d'
