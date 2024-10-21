@@ -18,6 +18,8 @@ __pycache__
 !.config/cava/
 !.config/cava/config
 
+!.config/starship.toml
+
 !.scripts/
 
 .local/*
