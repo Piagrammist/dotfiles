@@ -19,9 +19,4 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
     unset f
 fi
 
-picom --daemon
-nitrogen --restore &
-nm-applet &
-#eww daemon &
-#eww open bar &
 exec qtile start

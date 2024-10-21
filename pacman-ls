@@ -23,7 +23,6 @@ nano
 neovim
 networkmanager
 network-manager-applet
-nitrogen
 nodejs
 noto-fonts
 noto-fonts-emoji
@@ -70,9 +69,11 @@ vim
 virtualbox-guest-utils
 wget
 xclip
+xcolor
 xorg-apps
 xorg-drivers
 xorg-server
+xwallpaper
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting

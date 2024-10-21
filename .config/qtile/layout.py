@@ -1,9 +1,14 @@
 from libqtile import layout
 from libqtile.config import Match
 
+from color import palette
+
 layout_defaults = {
     "margin": 8,
-    "border_width": 0,
+    "border_width": 2,
+    "border_focus":  palette[0],
+    "border_normal": palette[7],
+    "border_on_single": False,
 }
 
 layouts = [

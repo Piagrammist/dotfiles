@@ -1,0 +1,6 @@
+#!/bin/sh
+
+[ -f "$1" ] || exit 1
+
+ln -srf "$1" ~/.cache/wall
+wall-restore

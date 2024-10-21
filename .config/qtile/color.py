@@ -117,3 +117,17 @@ TomorrowNight = [
     ["#b294bb", "#b294bb"],  # color06
     ["#70c0ba", "#70c0ba"],  # color15
 ]
+
+TokyoDark = [
+    ["#11121D", "#11121D"],  # bg
+    ["#A0A8CD", "#A0A8CD"],  # fg
+    ["#06080A", "#06080A"],  # black
+    ["#EE6D85", "#EE6D85"],  # red
+    ["#95C561", "#95C561"],  # green
+    ["#D7A65F", "#D7A65F"],  # yellow
+    ["#7199EE", "#7199EE"],  # blue
+    ["#A485DD", "#A485DD"],  # purple
+    ["#38A89D", "#38A89D"],  # cyan
+]
+
+palette = TokyoDark

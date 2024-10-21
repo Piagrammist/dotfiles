@@ -1,17 +1,12 @@
-import bar
-import color
-from group import groups, keys
-from hook import client_new
-from keybinding import mod, mouse
-from layout import floating_layout, layouts
 from libqtile.config import Screen
 
-palette = color.DoomOne
-
-widget_defaults = dict(
-    font="Mona Sans Bold Italic", fontsize=12, padding=0, background=palette[0]
-)
-extension_defaults = widget_defaults.copy()
+import bar
+from bar import widget_defaults, extension_defaults
+from color import palette
+from group import groups, keys
+from hook import *
+from keybinding import mod, mouse
+from layout import floating_layout, layouts
 
 screens = [
     Screen(top=bar.default),

@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[ -f ~/.cache/wall ] || exit 1
+
+xwallpaper --stretch ~/.cache/wall
