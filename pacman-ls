@@ -10,12 +10,14 @@ flameshot
 git
 gnome-keyring
 go
+gtk2
 gtk3
 gtk4
 htop
 less
 lua
 luarocks
+lxappearance
 man-db
 man-pages
 monolith
