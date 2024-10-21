@@ -38,3 +38,4 @@ __pycache__
 
 !aur-ls
 !pacman-ls
+!manual-ls
