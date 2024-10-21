@@ -40,5 +40,7 @@ floating_layout = layout.Floating(
         Match(title="branchdialog"),  # gitk
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="pinentry"),  # GPG key password entry
+        Match(wm_class="qalculate-qt"),
+        Match(wm_class="pavucontrol"),
     ]
 )
