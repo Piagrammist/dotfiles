@@ -7,16 +7,30 @@
     ```shell
     git clone https://github.com/Piagrammist/dotfiles "$HOME"
     ```
+
 - Install the packages:
 
     ```shell
     sudo pacman -S - < ~/pacman-ls
     ```
 
-- Run Nitrogen to set the wallpaper:
+- Manually install `paru`, and then:
 
     ```shell
-    nitrogen
+    paru -S - < ~/aur-ls
+    ```
+
+- Set your wallpaper using:
+
+    ```shell
+    wall-set "path/to/pic.jpg"
+    ```
+
+- Correct your home path in picom config:
+
+    ```
+    log-level = "warn";
+    log-file = "/home/rz/.local/share/picom/picom.log"; <----
     ```
 
 ## Git Credential Manager
