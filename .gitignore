@@ -1,41 +1,41 @@
 /*
-!.gitignore
-!.gitattributes
+!/.gitignore
+!/.gitattributes
 __pycache__
 
-.config/*
-!.config/
-!.config/alacritty/
-# !.config/eww/
-!.config/nvim/
-!.config/picom/
-!.config/qtile/
-!.config/ranger/
-!.config/rofi/
-!.config/shell/
+/.config/*
+!/.config/
+!/.config/alacritty/
+#!/.config/eww/
+!/.config/nvim/
+!/.config/picom/
+!/.config/qtile/
+!/.config/ranger/
+!/.config/rofi/
+!/.config/shell/
 
-.config/cava/*
-!.config/cava/
-!.config/cava/config
+/.config/cava/*
+!/.config/cava/
+!/.config/cava/config
 
-!.config/starship.toml
+!/.config/starship.toml
 
-!.scripts/
+!/.scripts/
 
-.local/*
-.local/share/*
-!.local/
-!.local/share/
-!.local/share/fonts/
-!.local/share/icons/
+#/.local/*
+#/.local/share/*
+#!/.local/
+#!/.local/share/
+#!/.local/share/fonts/
+#!/.local/share/icons/
 
-!.bash_profile
-!.bashrc
-!.vimrc
-!.xinitrc
-!.zprofile
-!.zshrc
+!/.bash_profile
+!/.bashrc
+!/.vimrc
+!/.xinitrc
+!/.zprofile
+!/.zshrc
 
-!aur-ls
-!pacman-ls
-!manual-ls
+!/aur-ls
+!/pacman-ls
+!/manual-ls
