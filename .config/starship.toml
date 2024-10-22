@@ -3,5 +3,8 @@
 command_timeout = 1000
 format = "$directory$character"
 
+[character]
+error_symbol = "[✗](bold red)"
+
 [package]
 disabled = true
