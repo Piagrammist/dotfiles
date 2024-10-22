@@ -1,11 +1,9 @@
-import os
 from subprocess import run
 
 from libqtile import hook
 
+from env import HOME
 from util import parse_window_name
-
-HOME = os.path.expanduser('~')
 
 
 @hook.subscribe.client_new
