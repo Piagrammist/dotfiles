@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# NOTE: do not surround paths using quotes!
+declare -A configs=(
+    ['zsh']=~/.zshrc
+    ['bash']=~/.bashrc
+    ['sh-alias']=~/.config/shell/aliases.sh
+    ['sh-env']=~/.config/shell/env.sh
+    ['sh-profile']=~/.config/shell/profile.sh
+    ['alacritty']=~/.config/alacritty/alacritty.toml
+    ['qtile']=~/.config/qtile/config.py
+    ['picom']=~/.config/picom/picom.conf
+    ['rofi']=~/.config/rofi/config.rasi
+    ['nvim']=~/.config/nvim/lua/vim-options.lua
+    ['vim']=~/.vimrc
+)
+
+# https://stackoverflow.com/a/17841619
+function join_by {
+    local d=${1-} f=${2-}
+    if shift 2; then
+        printf %s "$f" "${@/#/$d}"
+    fi
+}
+
+items=$(join_by "\n" "${!configs[@]}")
+choice=$(printf "$items" | rofi -dmenu -i -l 4 -p "ConfigMenu")
+
+# Exit if there is no matching choice.
+[[ $(echo ${!configs[@]} | command grep -Fw $choice) ]] || exit 1
+
+${TERM:-alacritty} -e ${EDITOR:-vim} ${configs[$choice]}
