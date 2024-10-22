@@ -5,7 +5,7 @@ from color import palette
 
 widget_defaults = dict(
     padding=0,
-    font='Roboto Slab',
+    font="Roboto Slab",
     fontsize=13,
     background=palette[0],
     foreground=palette[1],
@@ -22,7 +22,7 @@ default = bar.Bar(
         spacer,
         widget.TextBox(
             '󰣇',
-            font='Symbols Nerd Fonts',
+            font="Symbols Nerd Fonts",
             fontsize=24,
             markup=False,
         ),
@@ -58,7 +58,7 @@ default = bar.Bar(
             chords_colors={'launch': ('#ff0000', '#ffffff')},
             name_transform=lambda name: name.upper(),
         ),
-        widget.Clock(format='%m/%d  %H:%M'),
+        widget.Clock(format="%m/%d  %H:%M"),
         widget.Spacer(length=bar.STRETCH),
         # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
         # widget.StatusNotifier(),

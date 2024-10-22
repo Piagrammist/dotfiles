@@ -4,11 +4,11 @@ from libqtile.config import Match
 from color import palette
 
 layout_defaults = {
-    "margin": 8,
-    "border_width": 2,
-    "border_focus":  palette[0],
-    "border_normal": palette[7],
-    "border_on_single": False,
+    'margin': 8,
+    'border_width': 2,
+    'border_focus':  palette[0],
+    'border_normal': palette[7],
+    'border_on_single': False,
 }
 
 layouts = [
@@ -29,18 +29,24 @@ layouts = [
 floating_layout = layout.Floating(
     float_rules=[
         *layout.Floating.default_float_rules,
-        Match(wm_class="dialog"),  # dialog boxes
-        Match(wm_class="download"),  # downloads
-        Match(wm_class="error"),  # error msgs
-        Match(wm_class="notification"),  # notifications
-        Match(wm_class="file_progress"),  # file progress boxes
-        Match(wm_class="confirmreset"),  # gitk
-        Match(wm_class="makebranch"),  # gitk
-        Match(wm_class="maketag"),  # gitk
-        Match(title="branchdialog"),  # gitk
-        Match(wm_class="ssh-askpass"),  # ssh-askpass
-        Match(title="pinentry"),  # GPG key password entry
-        Match(wm_class="qalculate-qt"),
-        Match(wm_class="pavucontrol"),
+
+        Match(wm_class='error'),
+        Match(wm_class='dialog'),
+        Match(wm_class='download'),
+        Match(wm_class='notification'),
+        Match(wm_class='file_progress'),
+
+        Match(wm_class='ssh-askpass'),
+        Match(wm_class='qalculate-qt'),
+        Match(wm_class='pavucontrol'),
+
+        # gitk
+        Match(wm_class='confirmreset'),
+        Match(wm_class='makebranch'),
+        Match(wm_class='maketag'),
+        Match(title='branchdialog'),
+
+        # GPG key password entry
+        Match(title='pinentry'),
     ]
 )

@@ -19,20 +19,16 @@ for i in range(len(groups_info)):
         Group(
             name=name,
             label=info.get('label', name),
-            layout=info.get('layout', 'Tile').lower()
+            layout=info.get('layout', 'Tile').lower(),
         )
     )
-    keys.extend(
-        [
-            Key([mod],
-                name,
-                lazy.group[name].toscreen(),
-                desc=f'Switch to group {name}',
-            ),
-            Key([mod, 'shift'],
-                name,
-                lazy.window.togroup(name, switch_group=True),
-                desc=f'Switch to & move focused window to group {name}',
-            ),
-        ]
-    )
+    keys.extend([
+        Key([mod], name,
+            lazy.group[name].toscreen(),
+            desc=f"Switch to group {name}",
+        ),
+        Key([mod, 'shift'], name,
+            lazy.window.togroup(name, switch_group=True),
+            desc=f"Move focused window & switch to group {name}",
+        ),
+    ])

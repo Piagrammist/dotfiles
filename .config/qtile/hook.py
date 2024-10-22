@@ -17,4 +17,4 @@ def client_new(client):
 
 @hook.subscribe.startup_once
 def start_once():
-    run(f'{HOME}/.config/qtile/autostart.sh')
+    run(f"{HOME}/.config/qtile/autostart.sh")
