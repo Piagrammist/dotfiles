@@ -2,8 +2,6 @@
 
 decrement="$1"
 
-if ! [[ $decrement =~ ^[0-9]{1,2}$ ]]; then
-    decrement=5
-fi
+[[ $decrement =~ ^[0-9]{1,2}$ ]] || decrement=5
 
 pactl set-sink-volume @DEFAULT_SINK@ "-$decrement%"

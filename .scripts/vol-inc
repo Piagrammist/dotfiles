@@ -2,8 +2,6 @@
 
 increment="$1"
 
-if ! [[ $increment =~ ^[0-9]{1,2}$ ]]; then
-    increment=5
-fi
+[[ $increment =~ ^[0-9]{1,2}$ ]] || increment=5
 
 pactl set-sink-volume @DEFAULT_SINK@ "+$increment%"
