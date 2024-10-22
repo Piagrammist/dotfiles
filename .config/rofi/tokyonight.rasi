@@ -1,0 +1,91 @@
+* {
+    black: #000000;
+    white: #A0A8CD;
+    accent: #A485DD;
+    blue-dark: #24283b;
+    blue-light: #7199EE;
+
+    color: @blue-light;
+    border-color: @accent;
+    background-color: @blue-dark;
+}
+
+window {
+    spacing: 0;
+    border: 0;
+    border-radius: 10px;
+
+    orientation: horizontal;
+    location: center;
+    anchor: center;
+    transparency: "screenshot";
+    children: [ mainbox ];
+}
+
+mainbox, listview, element {
+    border-radius: inherit;
+}
+
+mainbox {
+    spacing: 0;
+    children: [ inputbar, message, listview ];
+}
+
+inputbar {
+    padding: 12px;
+    border: 0 0 3px 0;
+}
+
+prompt {
+    color: @accent;
+    margin: 0 15px 0 3px;
+}
+
+entry {
+    color: @white;
+    cursor: text;
+    placeholder: "Search";
+    placeholder-color: @white;
+}
+
+listview {
+    padding: 8px;
+    lines: 7;
+    columns: 2;
+    dynamic: false;
+}
+
+element {
+    padding: 2px;
+    vertical-align: 1;
+}
+
+element   normal.active,
+element selected.active,
+element selected.normal {
+    color: @black;
+    background-color: @accent;
+}
+
+element normal.urgent {
+    background-color: @white;
+}
+
+element-icon, element-text {
+    text-color: inherit;
+    background-color: inherit;
+}
+
+element-icon {
+    size: 2.5em;
+}
+
+element-text {
+    vertical-align: 0.5;
+}
+
+textbox {
+    color: @accent;
+    padding: 10px;
+    horizontal-align: 0.5;
+}

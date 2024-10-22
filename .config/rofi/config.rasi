@@ -1,1 +1,21 @@
-@theme "/usr/share/rofi/themes/Arc.rasi"
+configuration {
+    modi: [ drun, run, window ];
+    font: "FiraCode Nerd Font 10";
+
+    show-icons: true;
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    sidebar-mode: false;
+    display-drun: "";
+    display-run: "";
+    display-window: "";
+
+    kb-move-end: "End,KP_End";
+    kb-move-front: "Home,KP_Home";
+    kb-row-last: "Shift+End,Shift+KP_End";
+    kb-row-first: "Shift+Home,Shift+KP_Home";
+    kb-remove-word-forward: "Control+Delete";
+}
+
+@theme "tokyonight"
