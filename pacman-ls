@@ -29,6 +29,7 @@ nodejs
 noto-fonts
 noto-fonts-emoji
 openssh
+otf-codenewroman-nerd
 pacman-contrib
 pamixer
 pass
@@ -59,11 +60,15 @@ sudo
 tokei
 tree-sitter
 tree-sitter-cli
+ttf-d2coding-nerd
 ttf-dejavu
+ttf-firacode-nerd
 ttf-mona-sans
+ttf-mononoki-nerd
 ttf-mplus-nerd
 ttf-nerd-fonts-symbols
 ttf-roboto
+ttf-roboto-mono-nerd
 ttf-ubuntu-font-family
 ttf-ubuntu-mono-nerd
 ttf-ubuntu-nerd
