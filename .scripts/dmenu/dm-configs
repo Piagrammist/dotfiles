@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -eu
+source __dm_helper
+
 # NOTE: do not surround paths using quotes!
 declare -A configs=(
     ['zsh']=~/.zshrc
@@ -15,18 +18,8 @@ declare -A configs=(
     ['vim']=~/.vimrc
 )
 
-# https://stackoverflow.com/a/17841619
-function join_by {
-    local d=${1-} f=${2-}
-    if shift 2; then
-        printf %s "$f" "${@/#/$d}"
-    fi
-}
+names="$(__join_by '\n' "${!configs[@]}")"
+choice="$(printf "$names" | __menu 'Config File:')"
+[[ -z $choice ]] && exit 1
 
-items=$(join_by "\n" "${!configs[@]}")
-choice=$(printf "$items" | rofi -dmenu -i -l 4 -p "ConfigMenu")
-
-# Exit if there is no matching choice.
-[[ $(echo ${!configs[@]} | command grep -Fw $choice) ]] || exit 1
-
-${TERM:-alacritty} -e ${EDITOR:-vim} ${configs[$choice]}
+__edit_file "${configs[$choice]}"
