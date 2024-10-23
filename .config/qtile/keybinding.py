@@ -1,5 +1,5 @@
 from libqtile import qtile
-from libqtile.config import Drag, Key
+from libqtile.config import Drag, Key, KeyChord
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
@@ -42,6 +42,12 @@ keys = [
     Key([mod, 'control'], 'l', lazy.layout.grow_right(), desc="Grow window to the right"),
     Key([mod, 'control'], 'j', lazy.layout.grow_down(),  desc="Grow window down"),
     Key([mod, 'control'], 'k', lazy.layout.grow_up(),    desc="Grow window up"),
+
+    # Dmenu Scripts
+    KeyChord([mod], 'd', [
+        Key([], 'p', lazy.spawn("dm-power"),   desc="Run power dmenu"),
+        Key([], 'c', lazy.spawn("dm-configs"), desc="Run configs list dmenu"),
+    ]),
 ]
 
 
