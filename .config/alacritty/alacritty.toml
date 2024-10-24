@@ -6,8 +6,9 @@ import = [
 
 [window]
 padding = { x = 30, y = 36 }
-title = 'Alacritty'
-class = { general = 'Alacritty', instance = 'Alacritty' }
+#title = 'Alacritty'
+dynamic_title = false
+#class = { general = 'Alacritty', instance = 'Alacritty' }
 
 [font]
 size = 10
