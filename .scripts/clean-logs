@@ -1,0 +1,14 @@
+#!/bin/sh
+
+__rm() {
+    [ -z "$1" ] && exit 1
+    command rm -vf "$@"
+}
+
+__local=~/.local/share
+[ -f $__local/qtile/qtile.log ] && __rm $__local/qtile/qtile.log
+[ -f $__local/picom/picom.log ] && __rm $__local/picom/picom.log
+__rm $__local/xorg/Xorg.*.log*
+
+unset -v __local
+unset -f __rm
