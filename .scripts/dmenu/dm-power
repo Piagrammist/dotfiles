@@ -3,13 +3,26 @@
 set -eu
 source __dm_helper
 
-choice=$(printf "󰐥 Shutdown\n Restart\n󰤄 Suspend\n Log out"\
-    | __menu 'Power Option:' -l 4)
+MAX_ROWS=8
+# https://www.nerdfonts.com/cheat-sheet
+declare -A options=(
+    # f011
+    ['  Shutdown']='shutdown now'
+    # ead2
+    ['  Restart']='reboot'
+    # f0904
+    ['󰤄  Suspend']='systemctl suspend'
+    # f43a
+    ['  Hibernate']='systemctl hibernate'
+    # f023
+    ['  Lock']=''
+    # f05fd
+    ['󰗽  Log out']='killall qtile'
+)
 
-case "$choice" in
-    ' Restart')  reboot            ;;
-    '󰐥 Shutdown') shutdown    now   ;;
-    '󰤄 Suspend')  systemctl suspend ;;
-    ' Log out')  killall    qtile  ;;
-    *) exit 1 ;;
-esac
+rows=$(__min ${#options[@]} $MAX_ROWS)
+names="$(__join_by '\n' "${!options[@]}")"
+choice="$(printf "$names" | __menu 'Power Option:' -l $rows)"
+[[ -z $choice || -z "${options[$choice]}" ]] && exit 1
+
+eval "${options[$choice]}"

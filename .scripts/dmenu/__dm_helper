@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -eu
+
 function __menu {
     [[ -z $1 ]] && exit 1
     rofi -dmenu -i -p "$@"
@@ -8,6 +10,39 @@ function __menu {
 function __edit_file {
     [[ -f $1 ]] || exit 1
     "${TERM:-alacritty}" -e "${EDITOR:-vim}" "$1"
+}
+
+function __is_number {
+    for arg in "$@"; do
+        case "$arg" in
+            ''|*[!0-9]*) return 1 ;;
+        esac
+    done
+    return 0
+}
+
+function __max {
+    if [[ "$#" != '2' ]]; then
+        echo "ERROR: two numbers must be provided!" >&2
+        exit 1
+    fi
+    if ! __is_number $1 $2; then
+        echo "ERROR: provided arguments must be of type number!" >&2
+        exit 1
+    fi
+    echo $(( $1 > $2 ? $1 : $2 ))
+}
+
+function __min {
+    if [[ "$#" != '2' ]]; then
+        echo "ERROR: two numbers must be provided!" >&2
+        exit 1
+    fi
+    if ! __is_number $1 $2; then
+        echo "ERROR: provided arguments must be of type number!" >&2
+        exit 1
+    fi
+    echo $(( $1 < $2 ? $1 : $2 ))
 }
 
 function __cp2cb {
