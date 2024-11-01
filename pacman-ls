@@ -15,6 +15,7 @@ gtk3
 gtk4
 htop
 less
+libheif
 lua
 luarocks
 lxappearance
@@ -77,6 +78,7 @@ ueberzug
 unrar
 vim
 virtualbox-guest-utils
+vlc
 wget
 wmctrl
 xclip
