@@ -11,7 +11,6 @@ gifsicle
 git
 gnome-keyring
 go
-gtk2
 gtk3
 gtk4
 htop
@@ -37,7 +36,7 @@ pamixer
 papirus-icon-theme
 pass
 pavucontrol
-pcmanfm-gtk3
+pcmanfm
 peek
 php
 picom
@@ -88,6 +87,7 @@ xcolor
 xorg-apps
 xorg-drivers
 xorg-server
+xorg-xinit
 xwallpaper
 zsh
 zsh-autosuggestions

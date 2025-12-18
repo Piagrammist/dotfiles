@@ -21,12 +21,11 @@ default = bar.Bar(
     widgets=[
         spacer,
         widget.TextBox(
-            '󰣇',
+            '󰣇 ',
             font="Symbols Nerd Fonts",
             fontsize=24,
             markup=False,
         ),
-        spacer,
         widget.CurrentLayout(),
         spacer,
         line,

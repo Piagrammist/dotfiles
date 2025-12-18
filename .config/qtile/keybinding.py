@@ -4,7 +4,7 @@ from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
 mod = 'mod4'
-browser = 'freebrowser'
+browser = 'chrome'
 terminal = guess_terminal('alacritty')
 
 
@@ -24,6 +24,7 @@ keys = [
     Key([mod], 'Tab',   lazy.next_layout(),              desc="Toggle between layouts"),
     Key([mod], 't',     lazy.window.toggle_floating(),   desc="Toggle floating on the focused window"),
     Key([mod], 'f',     lazy.window.toggle_fullscreen(), desc="Toggle fullscreen on the focused window"),
+    Key([mod], "m",     lazy.window.toggle_maximize(),   desc="Toggle maximize"),
 
     # Window - Focus
     Key([mod], 'h', lazy.layout.left(),  desc="Move focus to left"),

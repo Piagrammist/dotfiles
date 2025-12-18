@@ -27,6 +27,7 @@ layouts = [
 ]
 
 floating_layout = layout.Floating(
+    border_width=0,
     float_rules=[
         *layout.Floating.default_float_rules,
 
